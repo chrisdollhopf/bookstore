@@ -1,4 +1,6 @@
 <?php
+// Enter cookies - very simple insecure cookie setup
+setcookie('username', $_POST['username']);
 // Here ! we are asking if the array is NOT empty
 $submitted = !empty($_POST);
 ?>
@@ -9,11 +11,13 @@ $submitted = !empty($_POST);
     <title>Bookstore</title>
 </head>
 <body>
-    <p>Form submitted? <?php echo (int) submitted; ?></p>
-    <p>>Your login info is</p>
+    <!-- The cookie is also implemented here -->
+    <p>You are <?php echo $_COOKIE['username']; ?></p>
+    <p>>Are you looking for a book? <?php echo (int) $lookingForBook; ?></p>
+    <p>The book you are looking fo is</p>
     <ul>
-        <li><b>username</b>: <?php echo $_POST['username']; ?></li>
-        <li><b>password</b>: <?php echo $_POST['password']; ?></li>
+        <li><b>Title</b>: <?php echo $_GET['title']; ?></li>
+        <li><b>Author</b>: <?php echo $_GET['author']; ?></li>
     </ul>
 </body>
 </html>

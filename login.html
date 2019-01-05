@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookstore - Login</title>
+</head>
+<body>
+    <p>Enter your details to login:</p>
+    <!-- Input forms, popular way to collect information from the user -->
+    <!-- Input form has two attributes: action - points where the form will be submitted
+                                        method - specifies the HTTP method the form will use (GET or POST) -->
+    <form action="authenticate.php" method="post">
+        <label>Username</label>
+            <input type="text" name="username" />
+        <label>Password</label>
+            <input type="password" name="password" />
+            <input type="submit" value="Login"/>
+    </form>
+</body>
+</html>
+<!-- This form needs the authenticate.php page otherwise it returns the Page Not Found message -->
